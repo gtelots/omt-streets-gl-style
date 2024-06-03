@@ -1,0 +1,12 @@
+version: '3.9'
+
+networks:
+  backend-net:
+    external: true
+
+services:
+  omt-streets-gl-style:
+    image: ttungbmt/omt-streets-gl-style:${OMTS_VERSION}
+    restart: unless-stopped
+    networks:
+      - backend-net
