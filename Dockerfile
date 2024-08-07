@@ -19,4 +19,7 @@ FROM nginx:latest AS production
 WORKDIR /usr/share/nginx/html
 
 COPY ./style.json ./
+COPY ./style-dark.json ./
+COPY ./style-dark-3d.json ./
+
 COPY --from=build /usr/src/app/sprites ./
